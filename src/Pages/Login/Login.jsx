@@ -5,7 +5,18 @@ import google from "../../assets/social.png";
 import { Link } from "react-router-dom";
 import { createContext, useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
 const Login = () => {
+  const auth = getAuth(app)
+  const provider = new GoogleAuthProvider();
+  const googleSignIn =() =>{
+    signInWithPopup(auth,provider)
+    .then(result =>{
+      const googleUser = result.googleUser;
+      console.log(googleUser)
+    }).catch(error => console.log(error))
+  }
   const { logInUser } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -73,7 +84,7 @@ const Login = () => {
               </div>
               <div className="mx-auto mt-8">
                 <p className="mb-5">Login with</p>
-                <Link>
+                <Link onClick={googleSignIn}>
                   <img
                     src={google}
                     alt=""

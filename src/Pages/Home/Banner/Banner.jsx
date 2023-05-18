@@ -1,12 +1,24 @@
+/* eslint-disable no-unused-vars */
 
-import cover from '../../../assets/cover.png'
+import cover from '../../../assets/cover.webp'
+import cover1 from '../../../assets/cover.png'
+import Gallery from '../Gallery/Gallery';
+import ironMan from '../../../assets/1136897-statue-Iron-Man-Toy-machine-comics-armour-action-figure.png'
 const Banner = () => {
     return (
-      <div className="mt-8 ">
-        <img className="h-2/3 mx-auto relative" src={cover} alt="" />
-        <p className="absolute text-black top-40 lg:top-44 text-xl font-bold italic lg:text-4xl">Best prizes in the world!!!</p>
-        
-      </div>
+      <>
+        <div className="mt-8">
+          <img
+            className=" mx-auto relative  shadow-md shadow-slate-400 border-y-2"
+            src={ironMan}
+            alt=""
+          />
+         
+        </div>
+        <div className="">
+          <Gallery></Gallery>
+        </div>
+      </>
     );
 };
 

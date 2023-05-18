@@ -12,7 +12,7 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
   console.log(user)
     return (
       <>
-        <div className="navbar bg-base-100 mt-5">
+        <div className="navbar bg-base-100 mt-5 sticky top-0 z-50">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -101,48 +101,52 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
               )}
 
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                <Link to='/blogs'>Blogs</Link>
+                <Link to="/blogs">Blogs</Link>
               </li>
             </ul>
           </div>
-          <div className="navbar-end">
-            {user ? (
-              <div className="tooltip" data-tip={user.displayName}>
-                <img
-                  src={user.photoURL}
-                  alt="image"
-                  className="mr-5 w-10 rounded-full"
-                />
-              </div>
-            ) : (
-              <div>
-                <Link
-                  to="/login"
-                  className="btn bg-green-500 text-white hover:bg-green-700"
-                >
-                  Log in
-                </Link>
-              </div>
-            )}
-            {user ? (
-              <div>
-                <button
-                  className="border text-lg font-bold hover:border-green-500 px-4 py-2 rounded-xl"
-                  onClick={logOutUser}
-                >
-                  Log out
-                </button>
-              </div>
-            ) : (
-              <div>
-                <Link
-                  to="/register"
-                  className="bg-green-500 p-3 rounded-xl text-black font-semibold"
-                >
-                  Register
-                </Link>
-              </div>
-            )}
+          <div className="navbar-end flex flex-col ml-20 lg:flex-row lg:mt-0 gap-6 mt-5">
+            <div className="">
+              {user ? (
+                <div className="tooltip" data-tip={user.displayName}>
+                  <img
+                    src={user.photoURL}
+                    alt="image"
+                    className=" w-10 rounded-full"
+                  />
+                </div>
+              ) : (
+                <div>
+                  <Link
+                    to="/login"
+                    className="border text-lg font-bold hover:border-yellow-500 px-4 py-2 rounded-xl"
+                  >
+                    Log in
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div>
+              {user ? (
+                <div>
+                  <button
+                    className="border text-lg font-bold hover:border-yellow-500 px-4 py-2 rounded-xl"
+                    onClick={logOutUser}
+                  >
+                    Log out
+                  </button>
+                </div>
+              ) : (
+                <div>
+                  <Link
+                    to="/register"
+                    className="border text-lg font-bold hover:border-yellow-500 px-4 py-2 rounded-xl"
+                  >
+                    Register
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </>
