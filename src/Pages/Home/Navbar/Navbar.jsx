@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import './Navbar.css'
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const logOutUser =() =>{
+logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
+  }
+  
+  console.log(user)
     return (
       <>
         <div className="navbar bg-base-100 mt-5">
@@ -63,7 +71,10 @@ const Navbar = () => {
               alt=""
             />
             <Link className="ml-2 normal-case text-xl">
-              <span className="text-3xl text-yellow-600 font-extrabold logoName">MARVEL</span> Toys
+              <span className="text-3xl text-yellow-600 font-extrabold logoName">
+                MARVEL
+              </span>{" "}
+              Toys
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -74,23 +85,64 @@ const Navbar = () => {
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
                 <Link>All Toys</Link>
               </li>
+              {user && (
+                <>
+                  <li className="hover:border hover:rounded-xl text-lg font-semibold">
+                    <Link>Add a Toy</Link>
+                  </li>
+                </>
+              )}
+              {user && (
+                <>
+                  <li className="hover:border hover:rounded-xl text-lg font-semibold">
+                    <Link>My Toys</Link>
+                  </li>
+                </>
+              )}
+
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                <Link>My Toys</Link>
-              </li>
-              <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                <Link>Add a Toy</Link>
-              </li>
-              <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                <Link>Blogs</Link>
+                <Link to='/blogs'>Blogs</Link>
               </li>
             </ul>
           </div>
           <div className="navbar-end">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQoR7iZKYVtn4CjWkoNsXCNbT6CUoYtUjYA&usqp=CAU"
-              alt=""
-              className="rounded-full w-16"
-            />
+            {user ? (
+              <div className="tooltip" data-tip={user.displayName}>
+                <img
+                  src={user.photoURL}
+                  alt="image"
+                  className="mr-5 w-10 rounded-full"
+                />
+              </div>
+            ) : (
+              <div>
+                <Link
+                  to="/login"
+                  className="btn bg-green-500 text-white hover:bg-green-700"
+                >
+                  Log in
+                </Link>
+              </div>
+            )}
+            {user ? (
+              <div>
+                <button
+                  className="border text-lg font-bold hover:border-green-500 px-4 py-2 rounded-xl"
+                  onClick={logOutUser}
+                >
+                  Log out
+                </button>
+              </div>
+            ) : (
+              <div>
+                <Link
+                  to="/register"
+                  className="bg-green-500 p-3 rounded-xl text-black font-semibold"
+                >
+                  Register
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </>

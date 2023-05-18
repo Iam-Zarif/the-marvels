@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
       <>
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer p-10 bg-base-200 text-base-content pb-20">
           <div>
             <img
               src="https://w0.peakpx.com/wallpaper/366/367/HD-wallpaper-avengers-logo-marvel.jpg"
