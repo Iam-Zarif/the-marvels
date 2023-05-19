@@ -4,7 +4,9 @@ import toy from '../../assets/toys (1).png'
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import Title from '../../Title/Title';
 const Register = () => {
+  Title('register')
   const navigate =useNavigate()
   const { createUser } = useContext(AuthContext);
     const handleRegister =(e) =>{

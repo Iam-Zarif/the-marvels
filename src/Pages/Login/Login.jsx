@@ -2,12 +2,15 @@
 
 import toy from "../../assets/toys.png";
 import google from "../../assets/social.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createContext, useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
+import Title from "../../Title/Title";
 const Login = () => {
+  Title('login')
+  const navigate = useNavigate()
   const auth = getAuth(app)
   const provider = new GoogleAuthProvider();
   const googleSignIn =() =>{
@@ -15,6 +18,7 @@ const Login = () => {
     .then(result =>{
       const googleUser = result.googleUser;
       console.log(googleUser)
+      navigate('/')
     }).catch(error => console.log(error))
   }
   const { logInUser } = useContext(AuthContext);
@@ -29,6 +33,7 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
         console.log(user);
+        navigate('/')
       })
       .catch((error) => console.log(error));
   };

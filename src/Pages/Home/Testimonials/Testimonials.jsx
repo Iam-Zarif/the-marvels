@@ -28,7 +28,7 @@ const Testimonials = () => {
               alt=""
             />
           </div>
-          <div className=" mx-auto grid grid-cols-1 lg:grid-cols-3 mt-20 gap-16 ">
+          <div className="px-14 mx-auto grid grid-cols-1 lg:grid-cols-3 mt-20 gap-16 ">
             <p className="mx-5">
               <span className="block text-2xl text-yellow-500">
                 Iron Man Electronic Helmet :
