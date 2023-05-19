@@ -4,7 +4,7 @@ import Title from "../../../Title/Title";
 
 
 const Blogs = () => {
-  Title('blogs')
+  Title('Blogs')
     return (
       <div className="mt-10 container mx-auto flex flex-col gap-10 justify-center items-center content-center">
         <div className="">

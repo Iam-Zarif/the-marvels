@@ -6,7 +6,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import Title from '../../Title/Title';
 const Register = () => {
-  Title('register')
+  Title('Register')
   const navigate =useNavigate()
   const { createUser } = useContext(AuthContext);
     const handleRegister =(e) =>{

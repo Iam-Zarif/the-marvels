@@ -5,8 +5,12 @@ import Stats from "../Stats/Stats";
 
 const Testimonials = () => {
     return (
-      <>
-        <div className="py-10 mt-24 border-y bg-gradient-to-r from-stone-700 via-slate-600 to-stone-700">
+      <div>
+        <div
+          data-aos="flip-left"
+          data-aos-duration="2000"
+          className="py-10 mt-24 border-y bg-gradient-to-r from-stone-700 via-slate-600 to-stone-700"
+        >
           <div>
             <h1 className="text-center text-4xl">Testimonials</h1>
             <p className="text-center text-xl mt-5">What they say</p>
@@ -80,7 +84,7 @@ const Testimonials = () => {
           </div>
         </div>
         <Stats></Stats>
-      </>
+      </div>
     );
 };
 

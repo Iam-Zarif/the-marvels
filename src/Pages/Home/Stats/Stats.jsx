@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 import img1 from "../../../assets/paddle.png";
 import img2 from "../../../assets/pets.png";
 import img3 from "../../../assets/rc-car.png";
 import img4 from "../../../assets/scooter.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Stats = () => {
   return (
     <>
@@ -9,7 +12,11 @@ const Stats = () => {
         <p className="text-center text-4xl">We produce variety of toys</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-36 px-10  mt-20">
-        <div className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 ">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 "
+        >
           <img className="w-4/12 mx-auto " src={img1} alt="" />
           <p className="text-3xl text-yellow-500 font-semibold">Indoor games</p>
           <p>
@@ -20,7 +27,11 @@ const Stats = () => {
             spaces such as living rooms, bedrooms, or play areas.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 ">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 "
+        >
           <img className="w-4/12 mx-auto " src={img2} alt="" />
           <p className="text-3xl text-yellow-500 font-semibold">Animal toys </p>
           <p>
@@ -31,7 +42,11 @@ const Stats = () => {
             offering a fun and engaging experience.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 ">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 "
+        >
           <img className="w-4/12 mx-auto " src={img3} alt="" />
           <p className="text-3xl text-yellow-500 font-semibold">Car Toys</p>
           <p>
@@ -42,7 +57,11 @@ const Stats = () => {
             enjoyable.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 ">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          className="flex flex-col items-center justify-center gap-5 border p-5 rounded-xl hover:border-yellow-500 "
+        >
           <img className="w-4/12 mx-auto " src={img4} alt="" />
           <p className="text-3xl text-yellow-500 font-semibold">Vehicle Toys</p>
           <p>

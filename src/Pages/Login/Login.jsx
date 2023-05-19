@@ -9,18 +9,19 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import Title from "../../Title/Title";
 const Login = () => {
-  Title('login')
-  const navigate = useNavigate()
-  const auth = getAuth(app)
+  Title("Log in");
+  const navigate = useNavigate();
+  const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
-  const googleSignIn =() =>{
-    signInWithPopup(auth,provider)
-    .then(result =>{
-      const googleUser = result.googleUser;
-      console.log(googleUser)
-      navigate('/')
-    }).catch(error => console.log(error))
-  }
+  const googleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const googleUser = result.googleUser;
+        console.log(googleUser);
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
+  };
   const { logInUser } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
         console.log(user);
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
