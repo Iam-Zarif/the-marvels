@@ -1,17 +1,56 @@
+import { useContext } from "react";
 import Title from "../../Title/Title";
 import './AddToy.css'
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const AddToy = () => {
+    const {user}= useContext(AuthContext)
+    const addToys =(e)=>{
+        e.preventDefault();
+        const form =e.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const seller = form.seller.value;
+        const Category = form.Category.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const description = form.description.value;
+        const email = form.email.value;
+        const data ={name,
+photo,
+seller,
+Category,
+price,
+rating,
+quantity,
+description,
+email}
+console.log(data);
+fetch("http://localhost:2000/toys", {
+  method: "POST",
+  headers: {
+    "content-type": "application/json",
+  },
+  body: JSON.stringify(data),
+})
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  });
+    }
     
   Title("Add Toys");
   return (
     <div>
-      <h1>Add a toy</h1>
+        
       <div>
+      
         <div className="hero min-h-screen bg-base-200">
           <div className="hero-content flex-col lg:flex-row-reverse">
+            
             <div className="card flex-shrink-0   shadow-2xl bg-base-100">
               <div className="card-body w-fit 2">
-                <form className="">
+                <form className="" onSubmit={addToys}>
                   <div className="grid grid-cols-1 gap-x-20 gap-y-3 lg:grid-cols-3">
                     <div className="form-control">
                       <label className="label">
@@ -41,6 +80,7 @@ const AddToy = () => {
                       </label>
                       <input required
                         name="seller"
+                        value={user?.displayName}
                         type="text"
                         placeholder="Seller Name"
                         className="w-60 lg:w-96 input input-bordered"
@@ -54,9 +94,9 @@ const AddToy = () => {
                         className="select select-info w-96 block input-group"
                         name="Category"
                       >
-                        <option className="input">Premium</option>
-                        <option className="input">Medium</option>
-                        <option className="input">Low</option>
+                        <option className="input">Iron-man</option>
+                        <option className="input">Thor</option>
+                        <option className="input">Thanos</option>
                       </select>
                     </div>
                     <div className="form-control">
@@ -109,6 +149,7 @@ const AddToy = () => {
                       <input required
                         name="email"
                         type="email"
+                        value={user?.email}
                         placeholder="Give seller's email"
                         className="w-60 lg:w-96 input input-bordered"
                       />

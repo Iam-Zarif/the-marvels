@@ -1,3 +1,4 @@
+import Categories from "../Categories/Categories";
 import Testimonials from "../Testimonials/Testimonials";
 
 
@@ -52,6 +53,7 @@ const Gallery = () => {
             alt=""
           />
         </div>
+        <Categories></Categories>
         <Testimonials></Testimonials>
       </>
     );

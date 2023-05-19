@@ -9,7 +9,7 @@ const Navbar = () => {
 logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
   }
   
-  console.log(user)
+  // console.log(user)
     return (
       <div data-aos="flip-right" data-aos-duration="1000">
         <div className="navbar bg-base-100 mt-5 sticky top-0 z-50">
@@ -83,7 +83,7 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
                 <Link to="/">Home</Link>
               </li>
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                <Link>All Toys</Link>
+                <Link to="/allToys">All Toys</Link>
               </li>
               {user && (
                 <>
@@ -95,7 +95,7 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
               {user && (
                 <>
                   <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                    <Link>My Toys</Link>
+                    <Link to="/myToys">My Toys</Link>
                   </li>
                 </>
               )}
