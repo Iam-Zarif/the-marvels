@@ -39,8 +39,13 @@ const router = createBrowserRouter([
       { path: "/allToys", element: <AllToys></AllToys> },
       {
         path: "/alltoys/:id",
-        element: <SignleToy></SignleToy>,
-        loader: ({ params }) => fetch(`http://localhost:2000/allToys/${params.id}`),
+        element: (
+          <PrivateRoutes>
+            <SignleToy></SignleToy>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://toy-marketplace-server-pied-psi.vercel.app/allToys/${params.id}`),
       },
     ],
   },

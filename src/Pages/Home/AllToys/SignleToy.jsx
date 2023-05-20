@@ -34,11 +34,10 @@ const SignleToy = () => {
           <p className="text-lg font-semibold"><span className="text-yellow-500">Ratings</span> : {rating}</p>
           <p className="mr-10 text-lg font-semibold"><span className="text-yellow-500">About the toy</span> : {description}</p>
           <p className="text-lg font-semibold"><span className="text-yellow-500">Seller name</span> : {seller}</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Watch</button>
-          </div>
+          
         </div>
       </div>
+        <button className="btn btn-outline btn-accent w-full  py-8">Buy Now</button>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Categories = () => {
   const [toy, setToy] = useState([]);
   const [category, setCategory] = useState("Iron-man");
   useEffect(() => {
-    fetch(`http://localhost:2000/data/${category}`)
+    fetch(`https://toy-marketplace-server-pied-psi.vercel.app/data/${category}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
