@@ -2,7 +2,17 @@ import { useContext } from "react";
 import Title from "../../Title/Title";
 import './AddToy.css'
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2/dist/sweetalert2.js";
 const AddToy = () => {
+  const success =()=>{
+Swal.fire({
+  title: "success!",
+  text: "Do you want to continue",
+  icon: "success",
+  confirmButtonText: "ok",
+});
+
+  }
     const {user}= useContext(AuthContext)
     const addToys =(e)=>{
         e.preventDefault();
@@ -29,6 +39,7 @@ console.log(data);
 fetch("http://localhost:2000/toys", {
   method: "POST",
   headers: {
+
     "content-type": "application/json",
   },
   body: JSON.stringify(data),
@@ -36,6 +47,7 @@ fetch("http://localhost:2000/toys", {
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
+    form.reset()
   });
     }
     
@@ -156,7 +168,9 @@ fetch("http://localhost:2000/toys", {
                     </div>
                   </div>
                   <div className="form-control mt-6">
-                    <button className=" text-lg text-yellow-500 ToyBtn border rounded-xl py-2 mt-4 hover:border-yellow-500">
+                    <button 
+                    onClick={success}
+                    className=" text-lg text-yellow-500 ToyBtn border rounded-xl py-2 mt-4 hover:border-yellow-500">
                       Add Toy
                     </button>
                   </div>

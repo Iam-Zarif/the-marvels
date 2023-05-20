@@ -1,10 +1,25 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import { useContext } from "react";
 import { TabPanel } from "react-tabs";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const TabItems = ({data}) => {
+  const loginToViewDetails =() =>{
+    if(!user){
+      Swal.fire({
+        title: "Error!",
+        text: "You have to log in first to view details",
+        icon: "error",
+        confirmButtonText: "ok",
+      });
+    }
+  }
+  const {user} = useContext(AuthContext)
     const { photo, name, price,rating } = data;
     console.log(data);
     return (
@@ -24,9 +39,21 @@ const TabItems = ({data}) => {
             <p>Price : {price} $ </p>
             <p>Rating : {rating} </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-accent ">
-                View details
-              </button>
+              {user ? (
+                <>
+                  <button className="btn btn-outline btn-accent ">
+                    View details
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link to='/login'>
+                    <button className="btn btn-outline btn-accent " onClick={loginToViewDetails}>
+                     View details
+                    </button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
