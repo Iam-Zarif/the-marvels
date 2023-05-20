@@ -19,6 +19,7 @@ const AllToysItems = ({ data }) => {
   const {user} = useContext(AuthContext)
     
     const {
+      _id,
       name,
       photo,
       seller,
@@ -46,9 +47,11 @@ const AllToysItems = ({ data }) => {
               {user ? (
                 <>
                   <td className="text-lg">
-                    <button className="btn btn-outline btn-accent">
-                      View details
-                    </button>
+                    <Link to={`/alltoys/${_id}`}>
+                      <button className="btn btn-outline btn-accent">
+                        View details
+                      </button>
+                    </Link>
                   </td>
                 </>
               ) : (

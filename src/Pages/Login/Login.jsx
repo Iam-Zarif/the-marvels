@@ -2,13 +2,15 @@
 
 import toy from "../../assets/toys.png";
 import google from "../../assets/social.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { createContext, useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import Title from "../../Title/Title";
 const Login = () => {
+  const location = useLocation()
+  const from = location.state?.from?.pathname || '/'
   Title("Log in");
   const navigate = useNavigate();
   const auth = getAuth(app);
@@ -18,7 +20,7 @@ const Login = () => {
       .then((result) => {
         const googleUser = result.googleUser;
         console.log(googleUser);
-        navigate("/");
+        navigate(from ,{replace : true});
       })
       .catch((error) => console.log(error));
   };

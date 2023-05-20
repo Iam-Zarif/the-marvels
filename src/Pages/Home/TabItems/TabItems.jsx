@@ -20,7 +20,7 @@ const TabItems = ({data}) => {
     }
   }
   const {user} = useContext(AuthContext)
-    const { photo, name, price,rating } = data;
+    const {_id, photo, name, price,rating } = data;
     console.log(data);
     return (
       <div className="mt-10 ">
@@ -41,15 +41,20 @@ const TabItems = ({data}) => {
             <div className="card-actions justify-end">
               {user ? (
                 <>
-                  <button className="btn btn-outline btn-accent ">
-                    View details
-                  </button>
+                  <Link to={`/alltoys/${_id}`}>
+                    <button className="btn btn-outline btn-accent ">
+                      View details
+                    </button>
+                  </Link>
                 </>
               ) : (
                 <>
-                  <Link to='/login'>
-                    <button className="btn btn-outline btn-accent " onClick={loginToViewDetails}>
-                     View details
+                  <Link to="/login">
+                    <button
+                      className="btn btn-outline btn-accent "
+                      onClick={loginToViewDetails}
+                    >
+                      View details
                     </button>
                   </Link>
                 </>
