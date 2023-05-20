@@ -11,8 +11,8 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
   
   // console.log(user)
     return (
-      <div data-aos="flip-right" data-aos-duration="1000">
-        <div className="navbar bg-base-100 mt-5 sticky top-0 z-50">
+      <div className="sticky top-0 z-50">
+        <div className="navbar bg-base-100 mt-5 ">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
