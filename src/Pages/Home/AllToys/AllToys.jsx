@@ -12,7 +12,7 @@ setAllItem(data)})
     },[])
     return (
         <div>
-            
+            {allItem.map(data => console.log(data))}
         </div>
     );
 };

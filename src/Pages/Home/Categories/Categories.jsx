@@ -42,7 +42,7 @@ const Categories = () => {
             </Tab>
           </TabList>
 
-          <div>
+          <div className="flex flex-col justify-center items-center lg:flex-row gap-24">
             {toy.slice(0,2).map(data => {
                 return <>
                 <TabItems
