@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import MyToysItems from "./MyToysItems";
 
 const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
@@ -26,14 +27,10 @@ const MyToys = () => {
  
 
   return (
-    <div>
-      {myToys.map((data) => (
-        <>
-          <p>{data.email}</p>
-          <p>{data.name}</p>
-          <img src={data.photo} alt="" />
-        </>
-      ))}
+    <div className="grid grid-cols-3 gap-10 mt-20">
+      {myToys.map((data => <MyToysItems key={data._id}
+      data ={data}
+      ></MyToysItems>) )}
     </div>
   );
 };
