@@ -25,6 +25,7 @@ createUser(email,password)
   console.log(newUser)
   updateProfile(res.user, { displayName: name, photoURL: photo });
   navigate('/login')
+  form.reset()
 })
 .catch(error => console.log(error))
     }

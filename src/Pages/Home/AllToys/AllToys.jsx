@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import AllToysItems from "./AllToysItems";
+import Title from "../../../Title/Title";
 
 
 const AllToys = () => {
+  Title("All Toys");
     const [allItem, setAllItem] = useState([])
     useEffect(() =>{
 fetch("http://localhost:2000/allToys").then(res => res.json()).then(data =>{

@@ -35,6 +35,7 @@ const Login = () => {
         const user = res.user;
         console.log(user);
         navigate("/");
+        form.reset();
       })
       .catch((error) => console.log(error));
   };

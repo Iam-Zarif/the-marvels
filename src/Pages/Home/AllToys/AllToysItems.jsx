@@ -46,14 +46,19 @@ const AllToysItems = ({ data }) => {
               {user ? (
                 <>
                   <td className="text-lg">
-                    <button className="btn">View details</button>
+                    <button className="btn btn-outline btn-accent">
+                      View details
+                    </button>
                   </td>
                 </>
               ) : (
                 <>
                   <td className="text-lg">
-                    <Link to='/login'>
-                      <button className="btn" onClick={error}>
+                    <Link to="/login">
+                      <button
+                        className="btn btn-outline btn-accent"
+                        onClick={error}
+                      >
                         View details
                       </button>
                     </Link>

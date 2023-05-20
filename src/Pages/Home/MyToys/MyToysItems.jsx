@@ -19,10 +19,7 @@ const MyToysItems = ({data}) => {
       <div>
         <div className="card w-96 glass mx-auto">
           <figure>
-            <img className="w-96 h-96"
-              src={photo}
-              alt="car!"
-            />
+            <img className="w-96 h-96" src={photo} alt="car!" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{name}</h2>
@@ -30,7 +27,9 @@ const MyToysItems = ({data}) => {
             <p>Rating : {rating} </p>
             <p>Items : {quantity} left</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">View Details</button>
+              <button className="btn btn-outline btn-accent">
+                View Details
+              </button>
             </div>
           </div>
         </div>

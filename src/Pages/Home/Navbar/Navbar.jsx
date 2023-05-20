@@ -85,20 +85,20 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
                 <Link to="/allToys">All Toys</Link>
               </li>
-              {user && (
-                <>
+              
+                
                   <li className="hover:border hover:rounded-xl text-lg font-semibold">
                     <Link to="/addToy">Add a Toy</Link>
                   </li>
-                </>
-              )}
-              {user && (
+                
+            
+            
                 <>
                   <li className="hover:border hover:rounded-xl text-lg font-semibold">
                     <Link to="/myToys">My Toys</Link>
                   </li>
                 </>
-              )}
+            
 
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
                 <Link to="/blogs">Blogs</Link>
