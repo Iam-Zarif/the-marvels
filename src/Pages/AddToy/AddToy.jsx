@@ -19,6 +19,7 @@ const AddToy = () => {
         const description = form.description.value;
         const email = form.email.value;
         const data ={name,
+          
 photo,
 seller,
 Category,

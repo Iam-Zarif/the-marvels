@@ -9,7 +9,7 @@ const Stats = () => {
   return (
     <>
       <div className="mt-20">
-        <p className="text-center text-4xl">We produce variety of toys</p>
+        <p className="text-center text-4xl font-bold">We produce variety of toys</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-36 px-10  mt-20">
         <div
