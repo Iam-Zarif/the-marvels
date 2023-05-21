@@ -29,7 +29,7 @@ quantity,
 description,
 email}
 console.log(data);
-fetch("http://localhost:2000/toys", {
+fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
   method: "POST",
   headers: {
 

@@ -8,7 +8,7 @@ const Categories = () => {
   const [toy, setToy] = useState([]);
   const [category, setCategory] = useState("Iron-man");
   useEffect(() => {
-    fetch(`http://localhost:2000/data/${category}`)
+    fetch(`https://toy-marketplace-server-pied-psi.vercel.app/data/${category}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -19,7 +19,7 @@ const Categories = () => {
   }, [category]);
   return (
     <div className="mt-32">
-      <h1 className="text-center text-4xl">
+      <h1 className="text-center text-4xl font-bold">
         You also Can search by Categories
       </h1>
       <div className="mt-20">

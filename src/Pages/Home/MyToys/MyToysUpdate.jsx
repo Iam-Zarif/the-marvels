@@ -21,7 +21,7 @@ const MyToysUpdate = () => {
       quantity: updatedQuantity,
     };
 
-    fetch(`http://localhost:2000/allToys/${_id}`, {
+    fetch(`https://toy-marketplace-server-pied-psi.vercel.app/allToys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

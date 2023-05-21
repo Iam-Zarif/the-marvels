@@ -12,7 +12,7 @@ const Testimonials = () => {
           className="py-10 mt-24 border-y bg-gradient-to-r from-stone-700 via-slate-600 to-stone-700"
         >
           <div>
-            <h1 className="text-center text-4xl">Testimonials</h1>
+            <h1 className="text-center text-4xl font-bold">Testimonials</h1>
             <p className="text-center text-xl mt-5">What they say</p>
           </div>
           <div className="lg:w-1/2 mx-auto grid grid-cols-3  mt-20">

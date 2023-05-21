@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <MyToysUpdate></MyToysUpdate>,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:2000/allToys/${params.id}`
+            `https://toy-marketplace-server-pied-psi.vercel.app/allToys/${params.id}`
           ),
       },
       {
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:2000/allToys/${params.id}`
+            `https://toy-marketplace-server-pied-psi.vercel.app/allToys/${params.id}`
           ),
       },
     ],
