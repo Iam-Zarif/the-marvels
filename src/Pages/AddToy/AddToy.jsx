@@ -21,7 +21,7 @@ Swal.fire({
         const photo = form.photo.value;
         const seller = form.seller.value;
         const Category = form.Category.value;
-        const price = form.price.value;
+        const price = form.Price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const description = form.description.value;

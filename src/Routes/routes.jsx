@@ -10,6 +10,7 @@ import MyToys from "../Pages/Home/MyToys/MyToys";
 import AllToys from "../Pages/Home/AllToys/AllToys";
 import PrivateRoutes from "./PrivateRoutes";
 import SignleToy from "../Pages/Home/AllToys/SignleToy";
+import MyToysUpdate from "../Pages/Home/MyToys/MyToysUpdate";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Register></Register> },
       { path: "/blogs", element: <Blogs></Blogs> },
+      {
+        path: "/update/:id",
+        element: <MyToysUpdate></MyToysUpdate>,
+        loader: ({ params }) =>
+          fetch(
+            `https://toy-marketplace-server-pied-psi.vercel.app/allToys/${params.id}`
+          ),
+      },
       {
         path: "/addToy",
         element: (
@@ -45,7 +54,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`https://toy-marketplace-server-pied-psi.vercel.app/allToys/${params.id}`),
+          fetch(
+            `https://toy-marketplace-server-pied-psi.vercel.app/allToys/${params.id}`
+          ),
       },
     ],
   },

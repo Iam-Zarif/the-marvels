@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyToysItems = ({ data, deleteMe }) => {
@@ -62,7 +63,9 @@ const MyToysItems = ({ data, deleteMe }) => {
               <td>{price} $</td>
               <td>{rating}</td>
               <td>
-                <button className="btn btn-outline btn-accent">Update</button>
+                <Link to={`/update/${_id}`}>
+                  <button className="btn btn-outline btn-accent">Update</button>
+                </Link>
               </td>
               <td>
                 <button
