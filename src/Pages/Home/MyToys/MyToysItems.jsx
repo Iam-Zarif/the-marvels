@@ -18,7 +18,7 @@ const MyToysItems = ({ data, deleteMe }) => {
   //       confirmButtonText: "Yes, delete it!",
   //     }).then((result) => {
   //       if (result.isConfirmed) {
-  //         fetch(`https://toy-marketplace-server-pied-psi.vercel.app/myToys/${_id}`,{
+  //         fetch(`http://localhost:2000/myToys/${_id}`,{
   //             method :"DELETE"
   //         })
   //           .then((res) => res.json())

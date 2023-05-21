@@ -8,7 +8,7 @@ const AllToys = () => {
   Title("All Toys");
     const [allItem, setAllItem] = useState([])
     useEffect(() =>{
-fetch("https://toy-marketplace-server-pied-psi.vercel.app/allToys").then(res => res.json()).then(data =>{
+fetch("http://localhost:2000/allToys").then(res => res.json()).then(data =>{
     
 console.log(data)
 setAllItem(data)})

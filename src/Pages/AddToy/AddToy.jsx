@@ -4,15 +4,7 @@ import './AddToy.css'
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 const AddToy = () => {
-  const success =()=>{
-Swal.fire({
-  title: "success!",
-  text: "Do you want to continue",
-  icon: "success",
-  confirmButtonText: "ok",
-});
-
-  }
+  
     const {user}= useContext(AuthContext)
     const addToys =(e)=>{
         e.preventDefault();
@@ -21,7 +13,7 @@ Swal.fire({
         const photo = form.photo.value;
         const seller = form.seller.value;
         const Category = form.Category.value;
-        const price = form.Price.value;
+        const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const description = form.description.value;
@@ -36,7 +28,7 @@ quantity,
 description,
 email}
 console.log(data);
-fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
+fetch("http://localhost:2000/toys", {
   method: "POST",
   headers: {
 
@@ -47,9 +39,18 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
-    form.reset()
+    
+    form.reset();
   });
     }
+    const success = () => {
+      Swal.fire({
+        title: "success!",
+        text: "Do you want to continue",
+        icon: "success",
+        confirmButtonText: "ok",
+      });
+    };
     
   Title("Add Toys");
   return (

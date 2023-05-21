@@ -22,7 +22,7 @@ const deleteMe = (id) => {
     confirmButtonText: "Yes, delete it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch(`https://toy-marketplace-server-pied-psi.vercel.app/myToys/${id}`, {
+      fetch(`http://localhost:2000/myToys/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -50,7 +50,7 @@ const deleteMe = (id) => {
     //   return;
     // }
       if (user && user.email) {
-      fetch(`https://toy-marketplace-server-pied-psi.vercel.app/myToys?email=${user.email}`)
+      fetch(`http://localhost:2000/myToys?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setMyToys(data);

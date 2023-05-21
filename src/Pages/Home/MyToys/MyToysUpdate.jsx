@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { useLoaderData } from "react-router-dom";
-
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 const MyToysUpdate = () => {
+    const navigate =useNavigate()
   const data = useLoaderData();
   const { _id, price, quantity, description } = data;
   console.log(data);
@@ -31,8 +32,16 @@ const MyToysUpdate = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          alert("Update successful");
+         Swal.fire({
+           position: "top-end",
+           icon: "success",
+           title: "Your work has been saved",
+           showConfirmButton: false,
+           timer: 1500,
+         });
+
         }
+        navigate('/mytoys')
       })
       .catch((error) => console.log(error));
   };
