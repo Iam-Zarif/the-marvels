@@ -8,12 +8,10 @@ import Title from '../../../Title/Title';
 const Banner = () => {
   Title('Marvel Toys')
     return (
-      <div
-        
-      >
-        <div className="mt-8">
+      <div>
+        <div className="">
           <img
-            className=" mx-auto relative  shadow-md shadow-slate-400 border-y-2"
+            className="w-full lg:h-[800px] mx-auto relative  shadow-md shadow-slate-400 border-y-2"
             src={ironMan}
             alt=""
           />

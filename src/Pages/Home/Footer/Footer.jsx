@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="flex lg:flex-row lg:justify-around flex-col items-center gap-16 content-center footer p-10 bg-base-200 text-base-content pb-20 mt-10">
           <div>
             <img
-              src="https://w0.peakpx.com/wallpaper/366/367/HD-wallpaper-avengers-logo-marvel.jpg"
+              src="https://i.ibb.co/GJw5SHD/Avengers-Endgame-Heroic-Logo-Men-s-T-Shirt-Black-4-XL.jpg"
               alt=""
               className="w-14 border rounded-full"
             />

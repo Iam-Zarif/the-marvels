@@ -11,8 +11,8 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
   
   // console.log(user)
     return (
-      <div className="sticky top-0 z-50">
-        <div className="navbar bg-base-100 mt-5 ">
+      <div className="fixed top-0 z-10 w-full ">
+        <div className="navbar bg-black opacity-70 py-7">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -66,7 +66,7 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
               </ul>
             </div>
             <img
-              src="https://w0.peakpx.com/wallpaper/366/367/HD-wallpaper-avengers-logo-marvel.jpg"
+              src="https://i.ibb.co/GJw5SHD/Avengers-Endgame-Heroic-Logo-Men-s-T-Shirt-Black-4-XL.jpg"
               className="w-14 border rounded-full ml-5"
               alt=""
             />
@@ -85,20 +85,16 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
                 <Link to="/allToys">All Toys</Link>
               </li>
-              
-                
-                  <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                    <Link to="/addToy">Add a Toy</Link>
-                  </li>
-                
-            
-            
-                <>
-                  <li className="hover:border hover:rounded-xl text-lg font-semibold">
-                    <Link to="/myToys">My Toys</Link>
-                  </li>
-                </>
-            
+
+              <li className="hover:border hover:rounded-xl text-lg font-semibold">
+                <Link to="/addToy">Add a Toy</Link>
+              </li>
+
+              <>
+                <li className="hover:border hover:rounded-xl text-lg font-semibold">
+                  <Link to="/myToys">My Toys</Link>
+                </li>
+              </>
 
               <li className="hover:border hover:rounded-xl text-lg font-semibold">
                 <Link to="/blogs">Blogs</Link>
