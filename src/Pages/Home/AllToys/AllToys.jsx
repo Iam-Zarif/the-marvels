@@ -15,7 +15,7 @@ setAllItem(data)})
     },[])
     return (
       <div>
-        <div className="grid grid-cols-6 mt-10 mx-auto w-2/3">
+        <div className="grid grid-cols-6 mt-44 mx-auto w-2/3">
           <h1 className="text-3xl font-semibold text-yellow-500 ">
             Seller name
           </h1>

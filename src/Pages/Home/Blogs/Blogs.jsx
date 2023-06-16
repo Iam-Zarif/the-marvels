@@ -6,7 +6,7 @@ import Title from "../../../Title/Title";
 const Blogs = () => {
   Title('Blogs')
     return (
-      <div className="mt-10 container mx-auto flex flex-col gap-10 justify-center items-center content-center">
+      <div className="mt-48 container mx-auto flex flex-col gap-10 justify-center items-center content-center">
         <div className="">
           <h1 className="text-center text-2xl lg:text-4xl">
             What is an access token and refresh token? How do they work and
