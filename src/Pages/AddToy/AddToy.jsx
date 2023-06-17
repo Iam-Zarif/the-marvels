@@ -108,9 +108,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                          <BiUserCircle/>
-                          Seller Name</span>
+                        <span className="label-text flex items-center gap-2">
+                          <BiUserCircle />
+                          Seller Name
+                        </span>
                       </label>
                       <input
                         required
@@ -123,9 +124,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                          <MdOutlineCategory/>
-                          Category</span>
+                        <span className="label-text flex items-center gap-2">
+                          <MdOutlineCategory />
+                          Category
+                        </span>
                       </label>
                       <select
                         className="select input-bordered input-warning  w-64 block input-group"
@@ -138,9 +140,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                          <GiPriceTag/>
-                          Price</span>
+                        <span className="label-text flex items-center gap-2">
+                          <GiPriceTag />
+                          Price
+                        </span>
                       </label>
                       <input
                         required
@@ -152,9 +155,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                          <AiFillStar/>
-                          Rating</span>
+                        <span className="label-text flex items-center gap-2">
+                          <AiFillStar />
+                          Rating
+                        </span>
                       </label>
                       <input
                         required
@@ -166,9 +170,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                          <MdFormatListNumberedRtl/>
-                          Available Quantity</span>
+                        <span className="label-text flex items-center gap-2">
+                          <MdFormatListNumberedRtl />
+                          Available Quantity
+                        </span>
                       </label>
                       <input
                         required
@@ -180,8 +185,8 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                        <BiDetail/>  Details description (optional)
+                        <span className="label-text flex items-center gap-2">
+                          <BiDetail /> Details description (optional)
                         </span>
                       </label>
                       <textarea
@@ -192,9 +197,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">
-                          <AiOutlineMail/>
-                          Seller email</span>
+                        <span className="label-text flex items-center gap-2">
+                          <AiOutlineMail />
+                          Seller email
+                        </span>
                       </label>
                       <input
                         required
