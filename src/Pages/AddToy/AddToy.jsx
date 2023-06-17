@@ -1,5 +1,10 @@
 import { useContext } from "react";
 import Title from "../../Title/Title";
+import {  } from "react-icons/fa";
+import { AiFillStar, AiOutlineMail } from "react-icons/ai";
+import { GiPriceTag } from "react-icons/gi";
+import { MdFormatListNumberedRtl, MdOutlineCategory, MdOutlineDriveFileRenameOutline } from "react-icons/md";
+import { BiDetail, BiPhotoAlbum, BiUserCircle } from "react-icons/bi";
 import './AddToy.css'
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2/dist/sweetalert2.js";
@@ -61,7 +66,8 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
         <div className="hero py-10  bg-base-200">
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="">
-              <img className="mx-10"
+              <img
+                className="mx-10"
                 src="https://i.ibb.co/y51LZrM/65c6ea9e407bc11243290d70fc0598f3.gif"
                 alt=""
               />
@@ -72,7 +78,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                   <div className="grid grid-cols-1 gap-x-20 gap-y-3 lg:grid-cols-3">
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Picture URL of Toy</span>
+                        <span className="label-text flex items-center gap-2 ">
+                          <BiPhotoAlbum />
+                          Picture URL of Toy
+                        </span>
                       </label>
                       <input
                         required
@@ -84,7 +93,10 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Toy Name</span>
+                        <span className="label-text flex items-center gap-2">
+                          <MdOutlineDriveFileRenameOutline />
+                          Toy Name
+                        </span>
                       </label>
                       <input
                         required
@@ -96,7 +108,9 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Seller Name</span>
+                        <span className="label-text">
+                          <BiUserCircle/>
+                          Seller Name</span>
                       </label>
                       <input
                         required
@@ -109,10 +123,12 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Category</span>
+                        <span className="label-text">
+                          <MdOutlineCategory/>
+                          Category</span>
                       </label>
                       <select
-                        className="select input-bordered input-warning input-warning w-64 block input-group"
+                        className="select input-bordered input-warning  w-64 block input-group"
                         name="Category"
                       >
                         <option className="input">Iron-man</option>
@@ -122,7 +138,9 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Price</span>
+                        <span className="label-text">
+                          <GiPriceTag/>
+                          Price</span>
                       </label>
                       <input
                         required
@@ -134,7 +152,9 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Rating</span>
+                        <span className="label-text">
+                          <AiFillStar/>
+                          Rating</span>
                       </label>
                       <input
                         required
@@ -146,7 +166,9 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Available Quantity</span>
+                        <span className="label-text">
+                          <MdFormatListNumberedRtl/>
+                          Available Quantity</span>
                       </label>
                       <input
                         required
@@ -159,7 +181,7 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">
-                          Details description (optional)
+                        <BiDetail/>  Details description (optional)
                         </span>
                       </label>
                       <textarea
@@ -170,7 +192,9 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Seller email</span>
+                        <span className="label-text">
+                          <AiOutlineMail/>
+                          Seller email</span>
                       </label>
                       <input
                         required
