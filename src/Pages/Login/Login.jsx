@@ -43,7 +43,7 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="hero pt-10 lg:pt-20 pb-20 bg-base-200">
+      <div className="hero pt-10 lg:pt-20 pb-20 bg-base-200 mt-20">
         <div className="hero-content flex-col lg:flex-row  lg:gap-24">
           <div className="text-center lg:text-left">
             <img src={toy} className="w-56 lg:w-full" alt="" />
