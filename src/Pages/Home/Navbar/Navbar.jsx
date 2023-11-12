@@ -36,7 +36,7 @@ logOut().then(result =>{console.log(result)}).catch(error => console.log(error))
   // console.log(user)
     return (
       <div className="fixed top-0 z-10 w-full ">
-        <div className="navbar bg-black opacity-70 py-7">
+        <div className="navbar bg-black opacity-80 py-2 pt-4">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
