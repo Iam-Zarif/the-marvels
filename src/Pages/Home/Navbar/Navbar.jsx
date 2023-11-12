@@ -6,24 +6,24 @@ import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const Navbar = () => {
   const navLinks = (
     <>
-      <li className="hover:border hover:rounded-xl text-lg font-semibold">
+      <li className="hover:border hover:rounded-xl  font-semibold">
         <NavLink 
         exact
         className="link" activeClassName ="active" to="/">Home</NavLink>
       </li>
-      <li className="hover:border hover:rounded-xl text-lg font-semibold">
+      <li className="hover:border hover:rounded-xl  font-semibold">
         <NavLink className="link" activeClassName ="active" to="/allToys">All Toys</NavLink>
       </li>
 
-      <li className="hover:border hover:rounded-xl text-lg font-semibold">
+      <li className="hover:border hover:rounded-xl  font-semibold">
         <NavLink className="link" activeClassName ="active" to="/addToy">Add a Toy</NavLink>
       </li>
 
-      <li className="hover:border hover:rounded-xl text-lg font-semibold">
+      <li className="hover:border hover:rounded-xl  font-semibold">
         <NavLink className="link" activeClassName ="active" to="/myToys">My Toys</NavLink>
       </li>
 
-      <li className="hover:border hover:rounded-xl text-lg font-semibold">
+      <li className="hover:border hover:rounded-xl  font-semibold">
         <NavLink className="link" activeClassName ="active" to="/blogs">Blogs</NavLink>
       </li>
     </>

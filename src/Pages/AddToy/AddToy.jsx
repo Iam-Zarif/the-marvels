@@ -8,6 +8,7 @@ import { BiDetail, BiPhotoAlbum, BiUserCircle } from "react-icons/bi";
 import './AddToy.css'
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2/dist/sweetalert2.js";
+import AddToysContainer from "./AddToysContainer";
 const AddToy = () => {
   
     const {user}= useContext(AuthContext)
@@ -60,14 +61,15 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
     
   Title("Add Toys");
   return (
-    <div className="mt-44">
+   <AddToysContainer>
+     <div className="mt-44">
       <div>
         <h1 className="text-center font-bold text-4xl mb-10">Add Your Toy</h1>
         <div className="hero py-10  bg-base-200">
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="">
               <img
-                className="mx-10"
+                className="mx-10  "
                 src="https://i.ibb.co/y51LZrM/65c6ea9e407bc11243290d70fc0598f3.gif"
                 alt=""
               />
@@ -227,6 +229,7 @@ fetch("https://toy-marketplace-server-pied-psi.vercel.app/toys", {
         </div>
       </div>
     </div>
+   </AddToysContainer>
   );
 };
 
